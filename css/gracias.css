@@ -1,0 +1,67 @@
+/**
+ * ESTILO GENERAL
+ */
+* {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    font-family: soulsFont;
+}
+
+@font-face {
+    font-family: soulsFont;
+    src: url(../../fonts/OptimusPrinceps.ttf);
+}
+
+/**
+ * ESTILOS DEL INFORMACION
+ */
+
+#informacionCont {
+    z-index: 9999;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.534);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 213vh;
+    height: 100vh;
+}
+
+#contenedorInst {
+    background-color: black;
+    border: 1px solid white;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 1000px;
+}
+
+#contenedorInst h2 {
+    font-size: 60px;
+    color: goldenrod;
+}
+
+#contenedorInst p {
+    font-size: 30px;
+    color: white;
+}
+
+#again {
+    font-size: 30px;
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#again:hover {
+    color: goldenrod;
+    background-color: rgb(53, 53, 53);
+    border: 1px solid goldenrod;
+    border-radius: 5px;
+}

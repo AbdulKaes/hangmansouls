@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman Souls</title>
+    <script type="text/javascript" src="./js/nivel3.js"></script>
+    <link rel="stylesheet" href="./css/nivel3.css">
+    <link rel="shortcut icon" href="../img/logoAhorcado.png" type="image/x-icon">
+</head>
+
+<body>
+    <div id="hasMuerto">
+        <h1> YOU DIED </h1>
+    </div>
+    <div id="hasGanado">
+        <h1> ENEMY DEFEATED </h1>
+    </div>
+    <div id="generalContainer">
+        <div id="spritesArea">
+            <div id="player">
+                <div id="playerInfo">
+                    <img src="../img/playerIcon.png" alt="player" id="playerIcon">
+                    <img src="../img/hpbar100.png" alt="player-life-bar" id="playerHP">
+                </div>
+                <div id="playerPosition">
+                    <img src="../img/playerIdle.gif" alt="player" id="playerSprite">
+                </div>
+            </div>
+            <div id="enemy">
+                <div id="enemyInfo">
+                    <h1>Rina, the fast arrow</h1>
+                </div>
+                <div id="enemyPosition">
+                    <img src="../img/leafArrowIdle.gif" alt="enemy" id="enemySprite">
+                </div>
+            </div>
+        </div>
+        <div id="gameArea">
+            <form id="errorsContainer">
+                <h1>Wrong Letters</h1>
+                <textarea readonly name="fails" id="letrasErroneas"></textarea>
+            </form>
+            <form id="playerInputContainer">
+                <input type="text" readonly id="guessedWord">
+                <h2>Type a letter: <input type="text" id="typedLetter"> </h2>
+                <input type="button" value="OK" id="botonOk">
+            </form>
+            <form id="hintsContainer">
+                <h1>Word Hint</h1>
+                <textarea readonly name="hints" id="pistaPalabra"></textarea>
+            </form>
+        </div>
+    </div>
+
+    <audio id="bgm">
+        <source src="../sounds/leafArrowOst.mp3" type="audio/mp3">
+    </audio>
+
+    <audio id="attackSound">
+        <source src="../sounds/attackSound.mp3">
+    </audio>
+
+    <audio id="leafArrowHurtSound">
+        <source src="../sounds/leafArrowHurtSound.mp3">
+    </audio>
+
+    <audio id="leafArrowDeathSound">
+        <source src="../sounds/leafArrowDeathSound.mp3">
+    </audio>
+
+    <audio id="errorSound">
+        <source src="../sounds/wrongSound.mp3">
+    </audio>
+
+    <audio id="hasMuertoSound">
+        <source src="../sounds/hasMuertoSound.mp3">
+    </audio>
+
+    <audio id="hasGanadoSound">
+        <source src="../sounds/hasGanadoSound.mp3">
+    </audio>
+</body>
+
+</html>

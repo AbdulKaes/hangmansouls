@@ -1,0 +1,170 @@
+/**
+ * ESTILO GENERAL
+ */
+* {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    font-family: soulsFont;
+}
+
+@font-face {
+    font-family: soulsFont;
+    src: url(../../fonts/OptimusPrinceps.ttf);
+}
+
+/**
+ * ESTILOS DEL INFORMACION
+ */
+
+#informacionCont {
+    z-index: 9999;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.534);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 213vh;
+    height: 100vh;
+    display: none;
+}
+
+#contenedorInst {
+    background-color: black;
+    border: 1px solid white;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 1000px;
+}
+
+#contenedorInst h2 {
+    font-size: 60px;
+    color: aqua;
+}
+
+#contenedorInst p {
+    font-size: 30px;
+    color: white;
+}
+
+#entendido {
+    font-size: 30px;
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#entendido:hover {
+    color: yellow;
+    background-color: rgb(53, 53, 53);
+    border: 1px solid yellow;
+    border-radius: 5px;
+}
+
+/**
+ * ESTILOS DE OPCIONES
+ */
+#opcionesCont {
+    z-index: 9999;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.534);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 213vh;
+    height: 100vh;
+    display: none;
+}
+
+#contenedorOpc {
+    background-color: black;
+    border: 1px solid white;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 1000px;
+}
+
+#contenedorOpc h2 {
+    font-size: 60px;
+    color: aqua;
+}
+
+#contenedorOpc p {
+    font-size: 30px;
+}
+
+#contenedorOpc h3 {
+    font-size: 30px;
+    color: greenyellow;
+}
+
+#spanish,
+#english {
+    font-size: 30px;
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#spanish:hover,
+#english:hover {
+    color: yellow;
+    background-color: rgb(53, 53, 53);
+    border: 1px solid yellow;
+    border-radius: 5px;
+}
+
+#idiomaBotones {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+
+/**
+ * ESTILO DEL MENU Y LAS OPCIONES
+ */
+#generalContainer {
+    padding: 14%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 7em;
+}
+
+ul {
+    background: none;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+li {
+    background: none;
+    font-size: 1.5em;
+    padding: 0.2em;
+    list-style: none;
+}
+
+li:hover {
+    font-size: 1.7em;
+    padding: 0.4em;
+    text-shadow: 10px 2px 10px orange;
+    box-shadow: 10px 2px 50px orange;
+    border-radius: 1000px;
+}

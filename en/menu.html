@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman Souls</title>
+    <script type="text/javascript" src="./js/menu.js"></script>
+    <link rel="stylesheet" href="./css/menu.css">
+    <link rel="shortcut icon" href="../img/logoAhorcado.png" type="image/x-icon">
+</head>
+
+<body>
+    <div id="informacionCont">
+        <form id="contenedorInst">
+            <h2>Information</h2>
+            <p>Version: Demo</p>
+            <p>
+                This game, Hangman Souls, was created by Kaes, do not steal it.
+            </p>
+            <p>The game cotains art from other creators, but the coding was all made by the author.
+                Enjoy the game
+            </p>
+            <input type="button" value="Understood!" id="entendido">
+        </form>
+    </div>
+
+    <div id="opcionesCont">
+        <form id="contenedorOpc">
+            <h2>Options</h2>
+            <div id="idiomaBotones">
+                <h3>Language: </h3>
+                <input type="button" value="Spanish" id="spanish">
+                <input type="button" value="English" id="english">
+            </div>
+        </form>
+    </div>
+
+    <audio autoplay id="menuTheme">
+        <source src="../sounds/menuTheme.mp3" type="audio/mp3">
+    </audio>
+    <div id="generalContainer">
+        <h1>HANGMAN SOULS</h1>
+        <ul id="menu">
+            <li id="comenzar">New Game</li>
+            <li id="informacion">Information</li>
+            <li id="opciones">Options</li>
+            <li id="salir">Exit</li>
+        </ul>
+    </div>
+
+    <audio id="hoverSound">
+        <source src="../sounds/menuHover.mp3" type="audio/mp3">
+    </audio>
+
+    <audio id="selectSound">
+        <source src="../sounds/menuSelect.mp3" type="audio/mp3">
+    </audio>
+</body>
+
+</html>

@@ -1,0 +1,293 @@
+/**
+ * ESTILO GENERAL
+ */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: pixelFont;
+}
+
+@font-face {
+    font-family: pixelFont;
+    src: url(../fonts/OptimusPrinceps.ttf);
+}
+
+/**
+ * ESTILOS DEL POP-UP DE VICTORIA
+ */
+#hasGanado {
+    z-index: 9999;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.676);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 213vh;
+    height: 100vh;
+    display: none;
+}
+
+#hasGanado h1 {
+    color: yellow;
+    font-size: 6em;
+}
+
+/**
+ * ESTILOS DEL POP-UP DE DERROTA
+ */
+#hasMuerto {
+    z-index: 9999;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.676);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 213vh;
+    height: 100vh;
+    display: none;
+}
+
+#hasMuerto h1 {
+    color: red;
+    font-size: 8em;
+}
+
+/**
+ * ESTILO CONTENEDOR GENERAL
+ */
+#generalContainer {
+    z-index: 0;
+    position: static;
+    display: grid;
+    grid-template-rows: 45vh 55vh;
+    grid-template-areas:
+        'spritesArea'
+        'gameArea';
+    color: white;
+}
+
+
+/**
+ * ESTILO AREA SPRITES
+ */
+#spritesArea {
+    background-image: url(../img/leafGameArea.gif);
+    background-size: contain;
+    display: grid;
+    grid-template-columns: 25em 45em 20em;
+    grid-template-areas:
+        'player . enemy';
+    grid-area: spritesArea;
+}
+
+
+#player {
+    grid-area: player;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#playerInfo {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+#playerIcon{
+    width: 70px;
+    margin-top: 10px;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    border-top: 1px solid white;
+    border-radius: 10px;
+    background-color: rgb(72, 64, 62);
+}
+
+#playerPosition img {
+    margin-bottom: 10px;
+    margin-right: 50px;
+}
+
+#enemy {
+    grid-area: enemy;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#enemy h1 {
+    color: white;
+    background-color: black;
+    padding: 20px;
+    width: 300px;
+    border: 1px solid white;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#enemyPosition img {
+    margin-bottom: 10px;
+    margin-right: 50px;
+}
+
+/**
+ * ESTILO AREA JUEGO
+ */
+#gameArea {
+    grid-area: gameArea;
+    background-color: black;
+    display: grid;
+    grid-template-columns: 25em 45em 20em;
+    grid-template-rows: 100%;
+    grid-template-areas:
+        'errors playerIn hints';
+    border: 4px ridge white;
+    border-radius: 40px;
+}
+
+#guessedWord {
+    text-align: center;
+}
+
+#guessedWord [type=text] {
+    display: flex;
+
+}
+
+/**
+ * ESTILO ERRORES
+ */
+#errorsContainer {
+    grid-area: errors;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#errorsContainer h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#letrasErroneas {
+    text-align: center;
+    color: red;
+    font-size: 1.9em;
+    background: none;
+    width: 12em;
+    height: 9em;
+    border: 1px solid white;
+    border-radius: 10px;
+    resize: none;
+    /**Para que el usuario no pueda manipular el tamaño del textarea */
+}
+
+#letrasErroneas [type="text"] {
+    background: none;
+    width: 25em;
+    height: 21em;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+/**
+ * ESTILO PLAYER INPUT
+ */
+#playerInputContainer {
+    grid-area: playerIn;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+#guessedWord {
+    font-family: sans-serif;
+    /**La fuente general tenia problemas. */
+    font-size: 25px;
+    padding: 15px;
+    color: greenyellow;
+    background: none;
+    border: 1px solid white;
+}
+
+#typedLetter {
+    width: 1em;
+    height: 1em;
+    background: none;
+    border: 1px solid white;
+    border-radius: 6px;
+}
+
+#typedLetter:hover {
+    border: 1px solid yellow;
+}
+
+#typedLetter[type="text"] {
+    color: yellow;
+    font-size: 1em;
+}
+
+#typedLetter[type="text"]:hover {
+    background-color: rgb(53, 53, 53);
+}
+
+#botonOk {
+    font-size: 25px;
+    padding: 15px;
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+#botonOk:hover {
+    color: yellow;
+    background-color: rgb(53, 53, 53);
+    border: 1px solid yellow;
+    border-radius: 5px;
+}
+
+/**
+ * ESTILO DE PISTAS
+ */
+#hintsContainer {
+    grid-area: hints;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#hintsContainer h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#pistaPalabra {
+    text-align: center;
+    color: aqua;
+    font-size: 1.9em;
+    background: none;
+    width: 13em;
+    height: 9em;
+    border: 1px solid white;
+    border-radius: 10px;
+    resize: none;
+    /**Para que el usuario no pueda manipular el tamaño del textarea */
+}
+
+#pistaPalabra [type="text"] {
+    background: none;
+    width: 25em;
+    height: 21em;
+    border: 1px solid white;
+    border-radius: 10px;
+}

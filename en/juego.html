@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman Souls</title>
+    <script type="text/javascript" src="./js/juego.js"></script>
+    <link rel="stylesheet" href="./css/juego.css">
+    <link rel="shortcut icon" href="../img/logoAhorcado.png" type="image/x-icon">
+</head>
+
+<body>
+    <div id="hasMuerto">
+        <h1> YOU DIED </h1>
+    </div>
+    <div id="hasGanado">
+        <h1> ENEMY DEFEATED </h1>
+    </div>
+
+    <div id="instrucciones">
+        <form id="contenedorInst">
+            <h2>How To Play</h2>
+            <p>
+                Welcome to Hangman Souls! You control the character on the left
+                and you have to defeat the enemies. You have to discover the word letter
+                per letter. But beware! If you fail the enemy will attack you and you will lose life points.
+            </p>
+            <p>
+                The enemy has no life bar, but that does not mean that he
+                is immortal: to defeat him you have to guess the entire word.
+                Always look at the word hint, and think about what the word is.
+                If you write wrong letters, you can see them in the wrong letters sectiion
+                and not make the mistake again.
+            </p>
+            <input type="button" value="Understood!" id="entendido">
+        </form>
+    </div>
+    <div id="generalContainer">
+        <div id="spritesArea">
+            <div id="player">
+                <div id="playerInfo">
+                    <img src="../img/playerIcon.png" alt="player" id="playerIcon">
+                    <img src="../img/hpbar100.png" alt="player-life-bar" id="playerHP">
+                </div>
+                <div id="playerPosition">
+                    <img src="../img/playerIdle.gif" alt="player" id="playerSprite">
+                </div>
+            </div>
+            <div id="enemy">
+                <div id="enemyInfo">
+                    <h1>Larry the Skeleton</h1>
+                </div>
+                <div id="enemyPosition">
+                    <img src="../img/skeleton.gif" alt="enemy" id="enemySprite">
+                </div>
+            </div>
+        </div>
+        <div id="gameArea">
+            <form id="errorsContainer">
+                <h1>Wrong Letters</h1>
+                <textarea readonly name="fails" id="letrasErroneas"></textarea>
+            </form>
+            <form id="playerInputContainer">
+                <input type="text" readonly id="guessedWord">
+                <h2>Type a letter: <input type="text" id="typedLetter"> </h2>
+                <input type="button" value="OK" id="botonOk">
+            </form>
+            <form id="hintsContainer">
+                <h1>Word Hint</h1>
+                <textarea readonly name="hints" id="pistaPalabra"></textarea>
+            </form>
+        </div>
+    </div>
+
+    <audio id="bgm">
+        <source src="../sounds/bgm.mp3" type="audio/mp3">
+    </audio>
+
+    <audio id="attackSound">
+        <source src="../sounds/attackSound.mp3">
+    </audio>
+
+    <audio id="skeletonHurtSound">
+        <source src="../sounds/skeletonHurtSound.mp3">
+    </audio>
+
+    <audio id="errorSound">
+        <source src="../sounds/wrongSound.mp3">
+    </audio>
+
+    <audio id="hasMuertoSound">
+        <source src="../sounds/hasMuertoSound.mp3">
+    </audio>
+
+    <audio id="hasGanadoSound">
+        <source src="../sounds/hasGanadoSound.mp3">
+    </audio>
+</body>
+
+</html>
