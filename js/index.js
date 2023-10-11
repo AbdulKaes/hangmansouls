@@ -11,7 +11,7 @@ function playSoundSelect() {
  */
 function comenzarJuego() {
     setTimeout(function () {
-        location.href = "menu.html";
+        location.href = "/hangmansouls/menu.html";
     }, 500);
 }
 
